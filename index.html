@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font style -->
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Reg Form</title>
+</head>
+
+<body>
+    <div class="container mobile-view">
+        <div id="success" class="alert alert-success alert-dismissible fade" role="alert">
+            <strong>Success!</strong> Your form has been submitted successfully !
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+
+        <div id="failure" class="alert alert-danger alert-dismissible fade" role="alert">
+            <strong>Error !</strong> Fill all the field !
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+
+        <form class="form" name="form1" method="POST" onsubmit="return validate();">
+            <div class="form__title">
+                <h1>Registration Form</h1>
+            </div>
+            <p class="form__desc" style="margin-bottom: 0 !important;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nostrum? Laudantium molestiae explicabo
+                numquam animi corrupti debitis ratione, accusamus nemo optio eum vero nesciunt facere aperiam! Labore
+                pariatur accusantium exercitationem.
+            </p>
+            <small id="require">All Fields are required</small>
+            <div class="form-items">
+                <div class="form__item ">
+                    <label for="givennames" class="form__label">Your Name</label>
+                    <input type="text" class="form__input form-control" name="name" id="Name"
+                        placeholder="Enter your name.." required>
+                    <small id="namevalid" class="form-text text-muted invalid-feedback">
+                        Your Name must be 3-20 characters long and should not contain number
+                    </small>
+                </div>
+                <div class="form__item">
+                    <label for="collegeName" class="form__label">College Name</label>
+                    <input type="text" class="form__input form-control" name="CName " id="college_name"
+                        placeholder="Enter your college Name..." required>
+                    <small id="phonevalid" class="form-text text-muted invalid-feedback">
+                        College/School Name should contain alphabate only
+                    </small>
+                </div>
+            </div>
+
+            <div class="form__item">
+                <label for="mobNo" class="form__label">Mobile No</label>
+                <input type="text" class=" form__input--small form-control" name="Telephone" id="mob_no"
+                    placeholder="Enter your Mob No...." required>
+                <small id="phonevalid" class="form-text text-muted invalid-feedback">
+                    Your phone number must be 10 digit long
+                </small>
+            </div>
+
+            <div class="form-items">
+                <div class="form__item">
+                    <label for="location" class="form__label">College City</label>
+                    <input type="text" class="form__input form-control" name="Address" id="college_location"
+                        placeholder="location.." required>
+                    <small id="namevalid" class="form-text text-muted invalid-feedback">
+                        City should be alphabatical value
+                    </small>
+                </div>
+
+                <div class="form__item">
+                    <label for="email" class="form__label">Email</label>
+                    <input type='text' name='EMail' class="form__input form-control" id="Email"
+                        placeholder="Enter your email.." required>
+                    <small id="emailvalid" class="form-text text-muted invalid-feedback">
+                        Your email must be a valid email
+                    </small>
+                </div>
+            </div>
+
+            <div class="form-items">
+                <div class="select-one">
+                    <div class="label">
+                        <label for="course" class="form__label">Current Course</label>
+                    </div>
+
+                    <div class="select">
+                        <select name="slct" class="sele " id="slctclg" required>
+                            <option selected disabled value="">Choose an option</option>
+                            <option value="1">Intermediate </option>
+                            <option value="2">3year law</option>
+                            <option value="3">5 year law</option>
+                            <option value="4">graduate</option>
+                            <option value="5">LLM</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="select-one">
+                    <div class="label">
+                        <label for="course" class="form__label">Year Of Completion</label>
+                    </div>
+
+                    <div class="select">
+
+                        <select name="slct1" id="slctyear" required>
+                            <option selected disabled value="">Choose an option</option>
+                            <option value="1">1990</option>
+                            <option value="2">1991</option>
+                            <option value="3">1992</option>
+                            <option value="4">1993</option>
+                            <option value="5">1994</option>
+                            <option value="6">1995</option>
+                            <option value="7">1996</option>
+                            <option value="8">1997</option>
+                            <option value="9">1998</option>
+                            <option value="10">1999</option>
+                            <option value="11">2000</option>
+                            <option value="12">2001</option>
+                            <option value="13">2002</option>
+                            <option value="14">2003</option>
+                            <option value="15">2004</option>
+                            <option value="16">2005</option>
+                            <option value="17">2006</option>
+                            <option value="18">2007</option>
+                            <option value="19">2008</option>
+                            <option value="20">2009</option>
+                            <option value="21">2010</option>
+                            <option value="22">2011</option>
+                            <option value="23">2012</option>
+                            <option value="24">2013</option>
+                            <option value="25">2014</option>
+                            <option value="26">2015</option>
+                            <option value="27">2016</option>
+                            <option value="28">2017</option>
+                            <option value="29">2018</option>
+                            <option value="30">2019</option>
+                            <option value="31">2020</option>
+                            <option value="32">2021</option>
+                            <option value="33">2022</option>
+                            <option value="34">2023</option>
+                            <option value="35">2024</option>
+                            <option value="36">2025</option>
+                            <option value="37">2026</option>
+                            <option value="38">2027</option>
+                            <option value="39">2028</option>
+                            <option value="40">2029</option>
+                            <option value="41">2030</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <input type="checkbox" name="terms" id="term" onchange="activateButton(this)" required> I Agree Terms &
+            Coditions
+
+            <div class="form__item">
+                <button class="form__btn" type="submit" id="submit">Sign Up</button>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
